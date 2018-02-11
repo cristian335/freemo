@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-.box {
-    width: 50%;
-    height: 200px;
-    border: 1px solid black;
-    padding: 25px;
-    margin: auto;
-}
-=======
 .display_false {
     display: none
 }
@@ -14,4 +5,3 @@
 .display_true {
     display: block
 }
->>>>>>> 8ad842504bc63d661122dc2eabcdec33b49e96e5
