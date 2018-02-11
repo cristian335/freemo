@@ -22,5 +22,15 @@ function vanish_number (time,min,max,function_pass,arg_1) {
 }
 
 function game () {
-    
+    let answer = document.getElementById("input").value;
+    check_display("error");
+
+    if(answer == response.rand){
+        document.getElementById("error").innerHTML = response.true;
+        change_button_value("next");
+    } else {
+        document.getElementById("error").innerHTML = response.false;
+        change_button_value("next");
+    }
+    document.getElementById("input").value = null;
 }
