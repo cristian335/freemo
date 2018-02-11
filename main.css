@@ -3,16 +3,5 @@
 }
 
 .display_true {
-    border: none;
-    border-bottom: 2px solid rgb(175, 175, 175);
-}
-
-.count_down {
-    color: red
-}
-
-.button_true {
-    background-color: rgb(63, 59, 59);
-    border: none;
-    color: rgb(240, 240, 240);
+    display: block
 }

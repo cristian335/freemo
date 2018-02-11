@@ -8,12 +8,14 @@ var random_number = (min, max) => {
     return rand;
 };
 
-function vanish_number (time,min,max) {
-    change_class_name("random_number", "");
+function vanish_number (time,min,max,function_pass,arg_1) {
+    function_pass(arg_1);
+    check_display("random_number");
     document.getElementById("random_number").innerHTML = random_number(min,max);
 
     setTimeout(function(){ 
-        change_class_name("random_number","display_false");
+        check_display("random_number");
+        function_pass(arg_1);
      }, time);
 }
 

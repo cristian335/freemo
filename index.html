@@ -12,9 +12,12 @@
 <body>
     <p id="random_number">Here will be the numbers displayed</p>
     <p id="error">Here will be the error</p>
-    <p id="count_down" class="count_down"></p>
-    <input type="tel" min="0" inputmode="numeric" id="input" class="display_false" pattern="[0-9]*" autofocus/> <!-- //use this type of html for numbers only (on phone) -->
-    <input type="button" id="button" class="button_true" value="start" onclick="check_button_value()">
+    <p id="count_down" class="display_true"></p>
+
+    <div class="display_true" id="input_pad">
+    <input type="tel" min="0" inputmode="numeric" id="input" class="display_true" pattern="[0-9]*" autofocus/> <!-- //use this type of html for numbers only (on phone) -->
+    <input type="button" id="button" class="display_true" value="start" onclick="check_button_value()"/>
+    </div>
     
 </body>
 </html>
