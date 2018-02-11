@@ -1,9 +1,10 @@
 var response = {
     true: "good job!",
-    false: "wrong!"
+    false: "wrong!",
+    rand: undefined
 };
 
-var random_number = (min, max) => {
+function random_number (min, max) {
     let rand = Math.floor(Math.random() * max ) + min;
     return rand;
 };
@@ -11,7 +12,8 @@ var random_number = (min, max) => {
 function vanish_number (time,min,max,function_pass,arg_1) {
     function_pass(arg_1);
     check_display("random_number");
-    document.getElementById("random_number").innerHTML = random_number(min,max);
+    response.rand = random_number(min,max);
+    document.getElementById("random_number").innerHTML = response.rand;
 
     setTimeout(function(){ 
         check_display("random_number");
