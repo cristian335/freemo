@@ -6,10 +6,23 @@
     <title>Freemo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="display_handler.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
+<<<<<<< HEAD
     <div class="box"></div>
 
+=======
+    <p id="random_number">Here will be the numbers displayed</p>
+    <p id="error" class="display_false">Here will be the error</p>
+    <p id="count_down" class="display_true"></p>
+
+    <div class="display_true" id="input_pad">
+    <input type="tel" min="0" inputmode="numeric" id="input" class="display_false" pattern="[0-9]*" autofocus/> <!-- //use this type of html for numbers only (on phone) -->
+    <input type="button" id="button" class="display_true" value="start" onclick="check_button_value()"/>
+    </div>
+    
+>>>>>>> 8ad842504bc63d661122dc2eabcdec33b49e96e5
 </body>
 </html>
