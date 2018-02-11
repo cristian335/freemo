@@ -9,18 +9,18 @@ it may break the display_handler
 }
 
 input[type=button] {
-    background-color: rgb(47, 136, 177);
+    background-color: rgb(11, 84, 117);
     border: none;
     color: white;
-    padding: 5px 20px;
-    margin: 8px 0px;
+    padding: 0.3125em 1.25em;
+    margin: 0.5em 0em;
     cursor: pointer;
 }
 
 input[type=text] {
     width: 25%;
-    padding: 5px 20px;
-    margin: 8px 0;
+    padding: 0.3125em 1.25em;
+    margin: 0.5em 0em;
     box-sizing: border-box;
 }
 
@@ -28,5 +28,5 @@ div {
     position: relative;
     overflow: hidden;
     padding-right: .5em;
-    font-size: 30px;
+    font-size: 1.875em;
 }
