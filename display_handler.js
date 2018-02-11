@@ -40,15 +40,19 @@ function check_display (id) {
     };
 
     var count_down = (time, function_pass, arg_1) => {
+        let seconds = time;
+
+        document.getElementById("count_down").textContent = seconds;
         function_pass(arg_1);
         let count = setInterval(function(){
-            document.getElementById("count_down").textContent = time;
-            time--;
-            if(time < 0) {
+            seconds--;
+            document.getElementById("count_down").textContent = seconds;
+            if(seconds  == 0) {
                 clearInterval(count);
                 check_display("count_down");
                 function_pass(arg_1);
                 vanish_number(response.seconds,response.option,response.nr,function_pass,arg_1);
+                seconds = null;
             }
         }, 1000);
     };
