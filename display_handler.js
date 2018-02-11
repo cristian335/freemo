@@ -1,6 +1,8 @@
 function check_button_value () {
     let button_value = document.getElementById("button").value;
     if (button_value === "start"){
+    check_display("error");
+    check_display("count_down");
     check_display("input");
     change_button_value("check"); // redirect to siplay game function 
     count_down(3,check_display,"input_pad");

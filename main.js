@@ -43,13 +43,35 @@ function game () {
     check_display("input");
 
     if(answer == response.rand){
-        document.getElementById("error").innerHTML = response.true;
         change_button_value("next");
         response.correct_answers++;
+
+        if(response.correct_answers == 3){
+            response.difficulty++;
+            response.correct_answers = null;
+            next_level();
+            document.getElementById("error").innerHTML = "Level " + (response.difficulty+1);
+        } else {
+            document.getElementById("error").innerHTML = response.true;
+        }
+
     } else {
-        document.getElementById("error").innerHTML = response.false;
         change_button_value("next");
         response.wrong_anwers++;
+
+        if (response.wrong_anwers == 3){
+            response.difficulty = null;
+            response.correct_answers = null;
+            response.wrong_anwers = null;
+            document.getElementById("error").innerHTML = "Lost Game";
+            next_level();
+        } else {
+            document.getElementById("error").innerHTML = response.false;
+        }
     }
     document.getElementById("input").value = null;
+}
+
+function next_level(win) {
+    change_button_value("start");
 }

@@ -1,7 +1,9 @@
 .display_false {
     display: none
 }
-
+/* if you change display_false and display true classes
+it may break the display_handler                             
+*/
 .display_true {
     display: block
 }
