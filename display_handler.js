@@ -1,6 +1,5 @@
 function check_button_value () {
     let button_value = document.getElementById("button").value;
-    console.log(button_value);
     if (button_value === "start"){
     check_display("input");
     change_button_value("check"); // redirect to siplay game function 
@@ -11,8 +10,8 @@ function check_button_value () {
 
     } else if(button_value === "next") {
         check_display("error");
-        check_display("input");
-        vanish_number(2000,1000,9999,check_display,"input_pad");
+        check_display("input"); 
+        vanish_number(response.seconds,response.option,response.nr,check_display,"input_pad");
         change_button_value("check");
 
     } else {
@@ -47,11 +46,7 @@ function check_display (id) {
                 clearInterval(count);
                 check_display("count_down");
                 function_pass(arg_1);
-                vanish_number(2000,1000,9999,function_pass,arg_1);
+                vanish_number(response.seconds,response.option,response.nr,function_pass,arg_1);
             }
         }, 1000);
     };
-
-    var all = (name) => {
-        alert("hello " + name);
-    }
