@@ -2,6 +2,7 @@ function check_button_value () {
     let button_value = document.getElementById("button").value;
     console.log(button_value);
     if (button_value === "start"){
+    check_display("input");
     change_button_value("check"); // redirect to siplay game function 
     count_down(3,check_display,"input_pad");
 
@@ -10,6 +11,7 @@ function check_button_value () {
 
     } else if(button_value === "next") {
         check_display("error");
+        check_display("input");
         vanish_number(2000,1000,9999,check_display,"input_pad");
         change_button_value("check");
 

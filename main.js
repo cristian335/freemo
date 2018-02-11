@@ -24,6 +24,7 @@ function vanish_number (time,min,max,function_pass,arg_1) {
 function game () {
     let answer = document.getElementById("input").value;
     check_display("error");
+    check_display("input");
 
     if(answer == response.rand){
         document.getElementById("error").innerHTML = response.true;
