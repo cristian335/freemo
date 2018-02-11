@@ -7,3 +7,26 @@ it may break the display_handler
 .display_true {
     display: block
 }
+
+input[type=button] {
+    background-color: rgb(47, 136, 177);
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    margin: 8px 0px;
+    cursor: pointer;
+}
+
+input[type=text] {
+    width: 25%;
+    padding: 5px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+div {
+    position: relative;
+    overflow: hidden;
+    padding-right: .5em;
+    font-size: 30px;
+}

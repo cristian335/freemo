@@ -10,13 +10,16 @@
     <script src="main.js"></script>
 </head>
 <body>
+    
+    <div align="center">
     <p id="random_number"></p>
     <p id="error" class="display_true">Level 1</p>
     <p id="count_down" class="display_false"></p>
+    </div>
 
-    <div class="display_true" id="input_pad">
-    <input type="tel" min="0" inputmode="numeric" id="input" class="display_false" pattern="[0-9]*" autofocus/> <!-- //use this type of html for numbers only (on phone) -->
-    <input type="button" id="button" class="display_true" value="start" onclick="check_button_value()"/>
+    <div class="display_true" id="input_pad" align="center">
+    <input type="tel" min="0" inputmode="numeric" id="input" class="display_false" pattern="[0-9]*" autofocus> <!-- //use this type of html for numbers only (on phone) -->
+    <input type="button" id="button" class="display_true" value="start" onclick="check_button_value()">
     </div>
     
 </body>
