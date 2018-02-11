@@ -2,8 +2,11 @@ var response = {
     true: "good job!",
     false: "wrong!",
     rand: undefined,
+    correct_answers: null,
+    wrong_anwers: null,
     option: "numbers",
     seconds: 2000,
+    difficulty: 0,
     nr: 4
 };
 
@@ -16,7 +19,7 @@ function random_number (option, max) {
 
     let real_option = eval("possible."+option);
   
-    for (var i = 0; i < max; i++) {
+    for (var i = 0; i < max + response.difficulty; i++) {
       number += real_option.charAt(Math.floor(Math.random() * real_option.length));
     }
     return number;
@@ -42,9 +45,11 @@ function game () {
     if(answer == response.rand){
         document.getElementById("error").innerHTML = response.true;
         change_button_value("next");
+        response.correct_answers++;
     } else {
         document.getElementById("error").innerHTML = response.false;
         change_button_value("next");
+        response.wrong_anwers++;
     }
     document.getElementById("input").value = null;
 }
